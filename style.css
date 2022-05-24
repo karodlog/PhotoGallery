@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+/* remise à zéro de toutes les marges */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  /* padding-top: 40px;
+  padding-bottom: 30px; */
+  width: 100%;
+  /* margin-top: 50px;
+  margin-bottom: 50px; */
+}
+
+header .heading{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 30px;
+  margin-top: 50px;
+}
+header .heading h3{
+  font-size: 8vw;
+  font-weight: bolder;
+  text-align: center;
+  /* padding-bottom: 10px; */
+  margin-bottom: -10px;
+  width: 100%;
+  /* border-bottom: 2px solid #222; */
+}
+header .heading h3 span{
+  font-weight: 100;
+  opacity: 20%;
+}
+.heading nav p{
+  display: inline;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  /* padding-right: 20px; */
+  /* margin-right: 10px; */
+}
+nav a{
+  /* padding: 20px; */
+  color: rgb(91, 91, 91);
+  text-decoration: none;
+  font-size: 1.5vw;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+nav a:hover{
+  color: rgb(150, 150, 150);
+}
+nav span{
+opacity: 20%;
+padding: 10px;
+}
+
+.pageactive{
+  border-bottom: 2px solid rgb(255, 128, 0);
+}
+
+.container{ /*contient deux DIV: la DIV heading avec le titre ET la DIV box avec toutes les img.
+  On souhaite que les deux soient l'une en-dessous de l'autre donc flex-direction: column*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.container .box{ /*contient trois DIV dream (colonnes) avec les images.
+  On souhaite que ces 3 DIV colonnes soient l'une à côté de l'autre donc flex-direction: row*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 90%;
+  margin: 0 auto;
+  /* margin-top: 50px; */
+}
+.container .box .dream{ /*contient toutes les img.
+  On souhaite que toutes les img soient l'une en-dessous de l'autre donc flex-direction: column*/
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 32%; /*pourcentage calculé en fonction du nombre de colonnes. Ici 3 colonnes. Donc 100% divisé par 3*/
+}
+.container .box .dream img{
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 7px;
+}
+.boutton{
+  background-color: rgb(150, 150, 150);
+  padding: 10px 30px;
+  margin: 50px 0  70px 0;
+  border-radius: 8px;
+}
+.boutton a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.boutton:hover{
+  background-color: rgb(116, 116, 116);
+  cursor: pointer;
+  box-shadow:inset 2px 2px 5px rgb(70, 70, 70);
+}
+
+footer{
+  background-color: #222;
+  padding: 40px 100px 100px 100px;
+}
+footer .container_pratique{
+  display: flex;
+  flex-direction: row;
+}
+footer h4{
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 1.5em;
+}
+.pratique{
+  padding-right: 200px;
+  border-left: 1px solid grey;
+  padding-left: 10px;
+
+}
+.pratique a{
+  color: rgb(135, 135, 135);
+  font-size: 1em;
+  text-decoration: none;
+  font-weight: 300;
+  transition: 0.3s;
+  line-height: 2em;
+}
+.pratique a:hover{
+  color: #fff;
+}
+
+@media only screen and (max-width: 770px){
+  .container .box{
+    flex-direction: column;
+  }
+  .container .box .dream{ 
+    width: 100%;
+  }
+  header{
+    width: 100%;
+  }
+  footer .container_pratique{
+    display: flex;
+    flex-direction: column;
+  }
+  header .heading h3{
+    font-size: 11vw;
+    font-weight: bolder;
+    /* padding-bottom: 10px; */
+    margin-bottom: -10px;
+    /* border-bottom: 2px solid #222; */
+  }
+  
+  
+}
+@media only screen and (max-width: 548px){
+header{
+    width: 100%;
+}
+.heading nav p{
+  display: flex;
+  flex-direction: column;
+}
+
+footer .container_pratique{
+  display: flex;
+  flex-direction: column;
+}
+header .heading h3{
+  width: 100%;
+  font-size: 10vw;
+  font-weight: bolder;
+  /* padding-bottom: 10px; */
+  margin-bottom: -10px;
+  /* border-bottom: 2px solid #222; */
+}
+.heading nav p{
+  display: block;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  /* padding-right: 20px; */
+  /* margin-right: 10px; */
+}
+nav a{
+  /* padding: 20px; */
+  color: rgb(91, 91, 91);
+  text-decoration: none;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+nav span{
+display: none;  }
+  
+
+
+}
